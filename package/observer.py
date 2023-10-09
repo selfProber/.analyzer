@@ -33,7 +33,7 @@ class Observer:
                 name = '.'
             else:
                 name = name.replace(' ', '_')
-                name = f'[name.upper()]'
+                name = f'[{name.upper()}]'
                 
         self.content += name
 
